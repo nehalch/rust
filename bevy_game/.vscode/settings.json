@@ -1,0 +1,24 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "sqlite",
+            "database": "/home/andrew/Documents/sqlite"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MariaDB",
+            "name": "mariadb",
+            "database": "db1",
+            "username": "andrew",
+            "password": "Qwerty!23"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}
