@@ -40,7 +40,7 @@ fn main(){
     };
     let andrew = Person{
         fname:"Andrew".to_string(),
-        sname:"Nehalchuk",
+        sname:"Ivanov",
         age:22
     };
     println!("{} {} {}", andrew.fname, andrew.sname, andrew.age);
