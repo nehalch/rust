@@ -3,5 +3,5 @@ fn grow(mut nums: Vec<i32>) -> i32 {
 }
 
 fn main() {
-    println!("{}", grow(vec![1, 2, 3, 4, 5]));
+    println!("{}", grow(svec![1, 2, 3, 4, 5]));
 }
