@@ -1,4 +1,7 @@
+fn grow(mut nums: Vec<i32>) -> i32 {
+    nums.iter().product()
+}
+
 fn main() {
-    println!("Hello, world!");
-    let a = "123";
+    println!("{}", grow(vec![1, 2, 3, 4, 5]));
 }
