@@ -118,13 +118,14 @@ fn main(){
 
 /*rust
 
-split_whitespaces
+split_whitespace()
 split()
 chars()
 s.push('a
 s.push_str('a
 Concatenation a + &b
 format!(
+let slice = &string[5..12]; 
 
 
     */
