@@ -116,8 +116,8 @@ fn main(){
    
 }
 
-/*
-rust
+/*rust
+
 split_whitespaces
 split()
 chars()
@@ -125,4 +125,5 @@ s.push('a
 s.push_str('a
 Concatenation a + &b
 format!(
-*/
+
+    */
