@@ -126,7 +126,8 @@ s.push_str('a
 Concatenation a + &b
 format!(
 let slice = &string[5..12]; 
-
+.starts_with("c")
+.pop() //remove last
 
     */
 
