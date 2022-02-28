@@ -64,8 +64,9 @@ fn main(){
     a.len();
     
     //Vectors
-    let v = vec![1, 2, 3]; // v: Vec<i32>
+    let v:Vec<i32> = vec![1, 2, 3]; // v: Vec<i32>
     v.push(4);
+    v.get(0); // get 0s element of vector
 
     //Slice
     let slice = &v[1..4];
@@ -127,7 +128,8 @@ Concatenation a + &b
 format!(
 let slice = &string[5..12]; 
 .starts_with("c")
-.pop() //remove last
+.pop(value) //remove value
+.trim() // remove spaces start and end
 
     */
 
