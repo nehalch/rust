@@ -130,6 +130,7 @@ let slice = &string[5..12];
 .starts_with("c")
 .pop(value) //remove value
 .trim() // remove spaces start and end
+str.matches("abc")
 
     */
 
