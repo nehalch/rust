@@ -132,6 +132,23 @@ let slice = &string[5..12];
 .trim() // remove spaces start and end
 str.matches("abc")
 
-    */
 
-    // 
+
+
+
+let mut a:Vec<i32> = vec![1,1,1,1];
+Vec::new()
+a[0]
+.push()
+.pop()  //del a value
+.contains() //boot a contain
+.remove() //by index
+.len() // length of vect
+.capacity()
+.iter().position(|&e| e == value).unwrap();
+for i in vec.iter(){}
+for x in my_vec.iter_mut(){*x *= 3;}
+let slice:&[i32] = &my_vec[2..4];
+
+
+    */
