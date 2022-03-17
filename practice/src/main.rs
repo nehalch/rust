@@ -26,7 +26,18 @@ fn xo(string: &'static str) -> bool {
     }
     return false;
 }
+struct CubeYes {
+    width: i32,
+    heigth: i32,
+    color: String,
+}
 
 fn main() {
     println!("{}", dna_strand("AAATTTCCCGGG"));
+
+    let my_cube = CubeYes {
+        width: 12,
+        heigth: 12,
+        color: "123".to_string(),
+    };
 }

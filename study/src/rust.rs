@@ -152,3 +152,16 @@ let slice:&[i32] = &my_vec[2..4];
 
 
     */
+
+
+struct CubeYes {
+    width: i32,
+    heigth: i32,
+    color: String,
+}
+let my_cube = CubeYes {
+    width: 12,
+    heigth: 12,
+    color: "123".to_string(),
+};
+fn some(s:CubeYes) -> CubeYes { return s; }
