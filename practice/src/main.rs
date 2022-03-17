@@ -31,6 +31,11 @@ struct CubeYes {
     heigth: i32,
     color: String,
 }
+impl CubeYes {
+    fn info(&self) {
+        println!("{0} {1} {2}", self.width, self.heigth, self.color);
+    }
+}
 
 fn main() {
     println!("{}", dna_strand("AAATTTCCCGGG"));
@@ -38,6 +43,7 @@ fn main() {
     let my_cube = CubeYes {
         width: 12,
         heigth: 12,
-        color: "123".to_string(),
+        color: "Blue".to_string(),
     };
+    my_cube.info();
 }

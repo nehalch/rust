@@ -159,6 +159,11 @@ struct CubeYes {
     heigth: i32,
     color: String,
 }
+impl CubeYes {
+    fn info(&self) {
+        println!("{0} {1} {2}", self.width, self.heigth, self.color);
+    }
+}
 let my_cube = CubeYes {
     width: 12,
     heigth: 12,
