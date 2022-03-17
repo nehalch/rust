@@ -35,6 +35,9 @@ impl CubeYes {
     fn info(&self) {
         println!("{0} {1} {2}", self.width, self.heigth, self.color);
     }
+    fn hello(name: &str) {
+        println!("Hello {}!", name);
+    }
 }
 
 fn main() {
@@ -46,4 +49,5 @@ fn main() {
         color: "Blue".to_string(),
     };
     my_cube.info();
+    CubeYes::hello("world");
 }

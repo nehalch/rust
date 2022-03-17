@@ -163,6 +163,9 @@ impl CubeYes {
     fn info(&self) {
         println!("{0} {1} {2}", self.width, self.heigth, self.color);
     }
+    fn hello(name: &str) {
+        println!("Hello {}!", name);
+    }
 }
 let my_cube = CubeYes {
     width: 12,
@@ -170,3 +173,5 @@ let my_cube = CubeYes {
     color: "123".to_string(),
 };
 fn some(s:CubeYes) -> CubeYes { return s; }
+my_cube.info();
+CubeYes::hello("world");
