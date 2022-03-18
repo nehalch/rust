@@ -175,3 +175,12 @@ let my_cube = CubeYes {
 fn some(s:CubeYes) -> CubeYes { return s; }
 my_cube.info();
 CubeYes::hello("world");
+
+
+
+
+//struct tuple
+
+struct test(i32, String, i32);
+    let a = test(32, "12".to_string(), 321);
+    a.0;
