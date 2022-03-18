@@ -40,6 +40,15 @@ impl CubeYes {
     }
 }
 
+struct Point {
+    x: i32,
+    y: i32,
+}
+fn test(_point1: Point, _point2: Point) -> f32 {
+    // Write code here!
+    return ((_point1.x + _point2.x) * *2 - (_point1.y + _point2.y) * *2) * *0.5;
+}
+
 fn main() {
     println!("{}", dna_strand("AAATTTCCCGGG"));
 
@@ -50,4 +59,14 @@ fn main() {
     };
     my_cube.info();
     CubeYes::hello("world");
+    struct test(i32, String, i32);
+    impl test {
+        fn hz(&self) {
+            print!("{}", self.0);
+        }
+    }
+
+    let a = test(32, "12".to_string(), 321);
+    a.0;
+    a.hz();
 }
