@@ -40,33 +40,89 @@ impl CubeYes {
     }
 }
 
-struct Point {
-    x: i32,
-    y: i32,
+enum WeekDay {
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday,
 }
-fn test(_point1: Point, _point2: Point) -> f32 {
-    // Write code here!
-    return ((_point1.x + _point2.x) * *2 - (_point1.y + _point2.y) * *2) * *0.5;
+enum TypeOfDay {
+    Work,
+    Study,
+    Holiday,
+    Weekend,
+    Medicine,
+}
+enum Mood {
+    Happy,
+    Good,
+    Sad,
+    Angry,
+}
+struct Day {
+    data: String,
+    name: String,
+    weekday: WeekDay,
+    day_type: TypeOfDay,
+    mood: Mood,
+}
+impl Day {
+    pub fn is_workday(&self) -> bool {
+        match self.day_type {
+            TypeOfDay::Work => true,
+            _ => false,
+        }
+    }
+}
+
+/////////////////////////////
+///
+///
+///
+enum VeryVerboseEnumOfThingsToDoWithNumbers {
+    Add,
+    Subtract,
+}
+
+impl VeryVerboseEnumOfThingsToDoWithNumbers {
+    fn run(&self, x: i32, y: i32) -> i32 {
+        match self {
+            Self::Add => x + y,
+            Self::Subtract => x - y,
+        }
+    }
+}
+
+/////////////////////////////////////////////////
+
+enum Hello {
+    Hello,
+}
+struct Hello {
+    hello: String,
+}
+
+impl Hello {
+    fn Hello() {
+        println!("hello");
+    }
 }
 
 fn main() {
-    println!("{}", dna_strand("AAATTTCCCGGG"));
-
-    let my_cube = CubeYes {
-        width: 12,
-        heigth: 12,
-        color: "Blue".to_string(),
+    let x = VeryVerboseEnumOfThingsToDoWithNumbers::Add;
+    let y = VeryVerboseEnumOfThingsToDoWithNumbers::Subtract;
+    println!("{} {}", x.run(12, 14), y.run(123, 65));
+    let tommorow = Day {
+        data: "String".to_string(),
+        name: "String".to_string(),
+        weekday: WeekDay::Friday,
+        day_type: TypeOfDay::Study,
+        mood: Mood::Good,
     };
-    my_cube.info();
-    CubeYes::hello("world");
-    struct test(i32, String, i32);
-    impl test {
-        fn hz(&self) {
-            print!("{}", self.0);
-        }
-    }
+    println!("{}", tommorow.day_type);
 
-    let a = test(32, "12".to_string(), 321);
-    a.0;
-    a.hz();
+    let hello = Hello::Hello;
 }
