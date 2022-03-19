@@ -98,19 +98,6 @@ impl VeryVerboseEnumOfThingsToDoWithNumbers {
 
 /////////////////////////////////////////////////
 
-enum Hello {
-    Hello,
-}
-struct Hello {
-    hello: String,
-}
-
-impl Hello {
-    fn Hello() {
-        println!("hello");
-    }
-}
-
 fn main() {
     let x = VeryVerboseEnumOfThingsToDoWithNumbers::Add;
     let y = VeryVerboseEnumOfThingsToDoWithNumbers::Subtract;
@@ -122,7 +109,5 @@ fn main() {
         day_type: TypeOfDay::Study,
         mood: Mood::Good,
     };
-    println!("{}", tommorow.day_type);
-
-    let hello = Hello::Hello;
+    println!("{}", tommorow.is_workday());
 }
