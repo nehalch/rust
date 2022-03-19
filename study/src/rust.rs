@@ -184,3 +184,15 @@ CubeYes::hello("world");
 struct test(i32, String, i32);
     let a = test(32, "12".to_string(), 321);
     a.0;
+
+fn somefn(lang: String) -> Option<bool> {
+    if lang == "Rust" {
+        return Some(true);
+    } else {
+        return None;
+    }
+struct Course {
+   code:i32,
+   name:String,
+   level: Option<String>, 
+}

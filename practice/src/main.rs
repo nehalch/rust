@@ -61,6 +61,7 @@ enum Mood {
     Good,
     Sad,
     Angry,
+    None,
 }
 struct Day {
     data: String,
@@ -110,4 +111,12 @@ fn main() {
         mood: Mood::Good,
     };
     println!("{}", tommorow.is_workday());
+}
+
+fn somefn(lang: String) -> Option<bool> {
+    if lang == "Rust" {
+        return Some(true);
+    } else {
+        return None;
+    }
 }
