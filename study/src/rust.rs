@@ -196,3 +196,12 @@ struct Course {
    name:String,
    level: Option<String>, 
 }
+fn file_found(i:bool) -> Result<i32,bool> {
+   if i { // if true
+      Ok(200) // return Ok(200)
+   } else { // if false
+      Err(false) // return Err(false)
+   }
+}
+
+if file_found(true).is_ok(){}
