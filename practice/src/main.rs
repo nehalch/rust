@@ -49,13 +49,7 @@ enum WeekDay {
     Saturday,
     Sunday,
 }
-enum TypeOfDay {
-    Work,
-    Study,
-    Holiday,
-    Weekend,
-    Medicine,
-}
+
 enum Mood {
     Happy,
     Good,

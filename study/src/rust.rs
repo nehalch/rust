@@ -190,12 +190,70 @@ fn somefn(lang: String) -> Option<bool> {
         return Some(true);
     } else {
         return None;
+
     }
-struct Course {
+
+
+
+enum TypeOfMovement {
+    Flying,
+    Steps,
+    Jumps,
+    Crawling,
+    Swimming,
+
+}
+trait Animal {
+    // Associated function signature; `Self` refers to the implementor type.
+    fn new(name: &'static str) -> Self;
+
+    // Method signatures; these will return a string.
+    fn name(&self) -> &'static str;
+    fn noise(&self) -> &'static str;
+
+    // Traits can provide default method definitions.
+    fn talk(&self) {
+        println!("{} says {}", self.name(), self.noise());
+    }
+}
+
+struct Dog {
    code:i32,
    name:String,
-   level: Option<String>, 
+   level: Option<String>,
+   go:TypeOfMovement, 
 }
+impl Dog {
+    pub fn kok(){}
+}
+impl Animal for Dog {
+    // `Self` is the implementor type: `Sheep`.
+    fn new(name: &'static str) -> Sheep {
+        Sheep { name: name, naked: false }
+    }
+
+    fn name(&self) -> &'static str {
+        self.name
+    }
+
+    fn noise(&self) -> &'static str {
+        if self.is_naked() {
+            "baaaaah?"
+        } else {
+            "baaaaah!"
+        }
+    }
+    
+    // Default trait methods can be overridden.
+    fn talk(&self) {
+        // For example, we can add some quiet contemplation.
+        println!("{} pauses briefly... {}", self.name, self.noise());
+    }
+}
+
+
+
+
 fn file_found(i:bool) -> Result<i32,bool> {
    if i { // if true
       Ok(200) // return Ok(200)
