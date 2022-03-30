@@ -49,6 +49,8 @@ fn somefn(lang: String) -> Option<bool> {
 }
 
 fn main() {
+    println!("What is your name?");
+
     let input = std::io::stdin();
 
     let mut b = String::new();
@@ -62,9 +64,13 @@ fn main() {
 
     print!("{}", random_number(123));
 }
-
+mod hm;
+use hm::greatings::*;
 use rand::Rng;
 fn random_number(size: i32) -> i32 {
     let mut rng = rand::thread_rng();
+
+    hm::main();
+    hello();
     return rng.gen_range(0..size);
 }
