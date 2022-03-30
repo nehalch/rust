@@ -10,6 +10,7 @@
 /// # 1ok
 pub fn main() {
     println!("Hello, world!");
+    super::hello();
 }
 
 pub mod greatings {
