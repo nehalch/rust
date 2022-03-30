@@ -40,77 +40,31 @@ impl CubeYes {
     }
 }
 
-enum WeekDay {
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday,
-    Sunday,
-}
-
-enum Mood {
-    Happy,
-    Good,
-    Sad,
-    Angry,
-    None,
-}
-struct Day {
-    data: String,
-    name: String,
-    weekday: WeekDay,
-    day_type: TypeOfDay,
-    mood: Mood,
-}
-impl Day {
-    pub fn is_workday(&self) -> bool {
-        match self.day_type {
-            TypeOfDay::Work => true,
-            _ => false,
-        }
-    }
-}
-
-/////////////////////////////
-///
-///
-///
-enum VeryVerboseEnumOfThingsToDoWithNumbers {
-    Add,
-    Subtract,
-}
-
-impl VeryVerboseEnumOfThingsToDoWithNumbers {
-    fn run(&self, x: i32, y: i32) -> i32 {
-        match self {
-            Self::Add => x + y,
-            Self::Subtract => x - y,
-        }
-    }
-}
-
-/////////////////////////////////////////////////
-
-fn main() {
-    let x = VeryVerboseEnumOfThingsToDoWithNumbers::Add;
-    let y = VeryVerboseEnumOfThingsToDoWithNumbers::Subtract;
-    println!("{} {}", x.run(12, 14), y.run(123, 65));
-    let tommorow = Day {
-        data: "String".to_string(),
-        name: "String".to_string(),
-        weekday: WeekDay::Friday,
-        day_type: TypeOfDay::Study,
-        mood: Mood::Good,
-    };
-    println!("{}", tommorow.is_workday());
-}
-
 fn somefn(lang: String) -> Option<bool> {
     if lang == "Rust" {
         return Some(true);
     } else {
         return None;
     }
+}
+
+fn main() {
+    let input = std::io::stdin();
+
+    let mut b = String::new();
+    input.read_line(&mut b);
+
+    let c = b.trim();
+    let d = c.parse::<i32>().unwrap();
+
+    println!("{}", c);
+    println!("{}", b);
+
+    print!("{}", random_number(123));
+}
+
+use rand::Rng;
+fn random_number(size: i32) -> i32 {
+    let mut rng = rand::thread_rng();
+    return rng.gen_range(0..size);
 }

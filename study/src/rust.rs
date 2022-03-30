@@ -285,3 +285,33 @@ fn concatenate<T:Display>(t:T, s:T){
    let result = format!("{}{}", t , s);
    println!("{}", result);
 }
+
+
+mod r {
+  fn print_statement(){
+    println!("Hi, this a function of module r");
+  }
+}
+// main function
+fn main() {
+  // invoke a module 'r'
+   r::print_statement();
+}
+
+
+// declare a module
+mod outer_module {
+  // function within outer module
+  fn my_private_function() {
+    println!("Hi, I got into the private function of outer module");
+  }
+  // declare a nested module
+  pub mod inner_module {
+    // function within nested module
+    pub fn my_public_function() {
+      println!("Hi, I got into the public function of inner module");
+      println!("I'll invoke private function of outer module");
+      super::my_private_function();
+    }
+  }
+}
