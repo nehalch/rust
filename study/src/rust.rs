@@ -315,3 +315,45 @@ mod outer_module {
     }
   }
 }
+
+
+let a = 2;
+
+
+
+// all statics data types in rust stored in stack memory
+// All primitive data types that have a fixed size are stored in stack memory.
+// All other data types are stored in heap memory.
+// When the size of data is not known at compile time rather it is known at the run time, it goes in a portion of program memory called heap memory.
+
+// owership
+
+// 1. Each value has a variable binding called its owner.               {a=1,b=1}
+// 2. There can only be one owner at a time.                            {a,-b- =3}
+// 3. When an owner goes out of scope, it does not remain accessible.   {a=3}
+// 4. When a value is moved for heap, its owner is no longer accessible.
+// 5. When a value is copied for stack, the new owner is the same as the old owner.
+
+// copy value type is for primitive types
+
+// move value type is for non-primitive types
+// let mut a = String::from("Rust"); // define a String and save in 'a'
+// let b = a.clone(); // b clones a
+
+
+
+
+
+
+
+
+// Rust has a concept of ownership.
+// Ownership is the ability to control the lifetime of a value.
+// The value can be owned by you, by the compiler, or by the operating system.
+// The ownership model is similar to that of C++.
+// The ownership model is based on reference counting.
+// When a variable is created, it is assigned a unique reference count of 1.
+// When a variable is assigned another variable, the previous variable is destroyed and the new variable is assigned a unique reference count of 1.
+// When a variable is destroyed, its reference count is decremented.
+// When the reference count of a variable reaches 0, the variable is destroyed.
+// When a variable is assigned to another variable, the previous variable is destroyed and the new variable is assigned a unique reference count of 1
