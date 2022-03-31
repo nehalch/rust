@@ -329,18 +329,24 @@ let a = 2;
 // owership
 
 // 1. Each value has a variable binding called its owner.               {a=1,b=1}
-// 2. There can only be one owner at a time.                            {a,-b- =3}
-// 3. When an owner goes out of scope, it does not remain accessible.   {a=3}
-// 4. When a value is moved for heap, its owner is no longer accessible.
-// 5. When a value is copied for stack, the new owner is the same as the old owner.
+// 2. There can only be one owner at a time.                            {a,-b- =3} {a=3, b=3}
+// 3. When an owner goes out of scope, it does not remain accessible.   {{a=3} drop(a)}
 
-// copy value type is for primitive types
+// 4. When a value is copied for stack, the new owner is the same as the old owner. {stack f(s){copy(stack)}}
+// copy value type is for primitive types          
 
+// 5. When a value is moved for heap, its owner is no longer accessible. {heap f(h){drop(heap)}}
 // move value type is for non-primitive types
 // let mut a = String::from("Rust"); // define a String and save in 'a'
 // let b = a.clone(); // b clones a
 
 
+
+// Rules of Borrowing
+// 1. Borrowing {one mut var } || { many shared var }
+// 2. References must always be valid. {f(a) b != &a}
+
+// 2. Borrowing can only occur in a function that borrows the value.
 
 
 
