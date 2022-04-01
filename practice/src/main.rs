@@ -62,6 +62,13 @@ fn main() {
     println!("{}", c);
     println!("{}", b);
 
+    let mut qwer = String::from("Hello");
+    fn hell<'a, T>(name: &'a mut T) -> &'a T {
+        return name;
+    }
+    let asdf = hell(&mut qwer);
+    println!("{}", asdf);
+
     print!("{}", random_number(123));
 }
 mod hm;

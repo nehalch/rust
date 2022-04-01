@@ -349,8 +349,25 @@ let a = 2;
 // 2. Borrowing can only occur in a function that borrows the value.
 
 
+// Memory lifetime
+// When we know the lifetime of a variable by just looking at the program code
+// When we can’t say anything about the lifetime of a variable
+
+// when we dont know the lifetime of a variable in function
+// we can use 'static lifetime
+// 'static lifetime is a lifetime that lasts the entire program.
+// 'static lifetime is the default lifetime for all types.
+
+fn get_course<'a, 'b> (c1: &'a Course, c2: &'b Course) -> &<'a, 'b> Course {}
 
 
+
+
+
+// Rules for Elision
+// 1. Each input parameter gets its own lifetime. If the lifetime is not specified, then the lifetime of each parameter is different.
+// 2. If there is only one input parameter, its lifetime is assigned to all the elided output lifetimes
+// 3. If there are multiple input lifetimes, one of them is &self or &mut self, the lifetime of self is assigned to all elided output lifetimes.
 
 
 // Rust has a concept of ownership.
