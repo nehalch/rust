@@ -405,7 +405,7 @@ fn a() -> <'_> {
 
 
 
-
+// closure fn
 // fn murfn oncefn
 
 fn foobar<F>(x: i32, y: i32, is_greater: F)
