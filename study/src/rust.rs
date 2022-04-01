@@ -442,3 +442,19 @@ fn main() {
 // tick 3...
 // tick 2...
 // tick 1...
+///////////////////////////
+fn make_tester<'a>(answer: &'a str) -> impl Fn(&str) -> bool + 'a {
+    move |challenge| {
+        challenge == answer
+    }
+}
+
+fn main() {
+    let test = make_tester("hunter2");
+    println!("{}", test("*******"));
+    println!("{}", test("hunter2"));
+}
+
+// output:
+// false
+// true
