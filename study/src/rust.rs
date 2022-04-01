@@ -422,3 +422,23 @@ fn foobar<F>(x: i32, y: i32, is_greater: F)
 fn main() {
     foobar(32, 64, |x, y| x > y);
 }
+
+
+
+///////////////////
+fn countdown<F>(count: usize, tick: F)
+    where F: Fn(usize)
+{
+    for i in (1..=count).rev() {
+        tick(i);
+    }
+}
+ 
+fn main() {
+    countdown(3, |i| println!("tick {}...", i));
+}
+
+// output:
+// tick 3...
+// tick 2...
+// tick 1...
