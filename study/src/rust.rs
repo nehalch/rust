@@ -15,8 +15,20 @@ fn main(){
         //Int i8 isize u8 usize
         let mut a:i32 = 32;
         // f8 - float
+        let _ = 42; // nothing
+        let _x = 42; // unused
     }
-    {
+
+    type Meters = u32;
+    type Kilograms = u32;
+
+    let m: Meters = 3;
+    let k: Kilograms = 3;
+
+
+
+
+{
         //&str as an array and a slice
         let string = "Hello there."; // string: &str
         //String as a vector
@@ -359,6 +371,11 @@ let a = 2;
 // 'static lifetime is the default lifetime for all types.
 
 fn get_course<'a, 'b> (c1: &'a Course, c2: &'b Course) -> &<'a, 'b> Course {}
+fn a() -> <'_> {
+    &var
+}
+
+// 'static lifetime for entire prog life
 
 
 
@@ -380,3 +397,24 @@ fn get_course<'a, 'b> (c1: &'a Course, c2: &'b Course) -> &<'a, 'b> Course {}
 // When a variable is destroyed, its reference count is decremented.
 // When the reference count of a variable reaches 0, the variable is destroyed.
 // When a variable is assigned to another variable, the previous variable is destroyed and the new variable is assigned a unique reference count of 1
+
+
+
+
+
+
+
+
+
+// fn murfn oncefn
+
+fn foobar<I, F>(x: I, f: F)
+where
+    I: std::fmt::Display,
+    F: Fn() -> I,
+{
+    println!("{}", f(x));
+}
+
+
+foobar(2, |x| x *= 2);

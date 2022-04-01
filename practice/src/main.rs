@@ -70,6 +70,13 @@ fn main() {
     println!("{}", asdf);
 
     print!("{}", random_number(123));
+
+    use std::fs;
+    use std::fs::File;
+
+    let mut f = File::open("foo.txt").unwrap();
+    println!("{:?}", f.metadata().unwrap());
+    //fs::write("foo.txt", b"Lorem ipsum");
 }
 mod hm;
 use hm::greatings::*;
