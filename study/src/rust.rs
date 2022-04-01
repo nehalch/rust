@@ -408,13 +408,17 @@ fn a() -> <'_> {
 
 // fn murfn oncefn
 
-fn foobar<I, F>(x: I, f: F)
-where
-    I: std::fmt::Display,
-    F: Fn() -> I,
+fn foobar<F>(x: i32, y: i32, is_greater: F)
+    where F: Fn(i32, i32) -> bool
 {
-    println!("{}", f(x));
+    let (greater, smaller) = if is_greater(x, y) {
+        (x, y)
+    } else {
+        (y, x)
+    };
+    println!("{} is greater than {}", greater, smaller);
 }
-
-
-foobar(2, |x| x *= 2);
+ 
+fn main() {
+    foobar(32, 64, |x, y| x > y);
+}
