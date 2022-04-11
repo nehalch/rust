@@ -48,6 +48,38 @@ fn somefn(lang: String) -> Option<bool> {
     }
 }
 
+fn integral_fn_of<F, A, B, C>(f: &'static F) -> impl Fn(A, B, C) -> f64 + 'static
+where
+    A: Into<f64>,
+    A: From<i32>,
+    B: Into<f64>,
+    B: From<i32>,
+    C: Into<f64>,
+    C: From<i32>,
+    F: Fn(f64) -> f64 + 'static,
+{
+    move |from: A, to: B, step: C| {
+        let mut from: f64 = from.into();
+        let to: f64 = to.into();
+        let step: f64 = step.into();
+
+        let mut result: f64 = 0.0;
+
+        println!(
+            "Start counting integral\nfrom {} to {} with step {} \n....",
+            from, to, step
+        );
+
+        while from <= to {
+            result += f(from) * step;
+            from += step;
+        }
+        println!("Answer is {} squares", result);
+        result
+    }
+}
+
+
 fn main() {
     println!("What is your name?");
 
