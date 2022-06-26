@@ -47,7 +47,10 @@ fn somefn(lang: String) -> Option<bool> {
         return None;
     }
 }
+// TODO kmfefeof
 
+// FIXME fjioewjf
+// ISSUE erlkfe
 fn integral_fn_of<F, A, B, C>(f: &'static F) -> impl Fn(A, B, C) -> f64 + 'static
 where
     A: Into<f64>,
@@ -79,7 +82,6 @@ where
     }
 }
 
-
 fn main() {
     println!("What is your name?");
 
@@ -101,6 +103,8 @@ fn main() {
     let asdf = hell(&mut qwer);
     println!("{}", asdf);
 
+    print!("{}", random_number(123));
+    print!("{}", random_number(123));
     print!("{}", random_number(123));
 
     use std::fs;
