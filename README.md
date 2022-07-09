@@ -1,4 +1,4 @@
-# My studies and my [CV](https://wewrgegtyj.github.io/rust/)
+# My study notes
 
 ## Basic datatypes
 | Name       | Number      | Alfa   | Option |
