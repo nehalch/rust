@@ -28,19 +28,21 @@ fn xo(string: &'static str) -> bool {
 }
 struct CubeYes {
     width: i32,
-    heigth: i32,
+    height: i32,
     color: String,
 }
 impl CubeYes {
     fn info(&self) {
-        println!("{0} {1} {2}", self.width, self.heigth, self.color);
+        println!("{0} {1} {2}", self.width, self.height, self.color);
     }
+
+    /// # hello method works good
     fn hello(name: &str) {
         println!("Hello {}!", name);
     }
 }
 
-fn somefn(lang: String) -> Option<bool> {
+fn some_fn(lang: String) -> Option<bool> {
     if lang == "Rust" {
         return Some(true);
     } else {
@@ -92,11 +94,11 @@ fn main() {
     println!("{}", c);
     println!("{}", b);
 
-    let mut qwer = String::from("Hello");
+    let mut string_var = String::from("Hello");
     fn hell<'a, T>(name: &'a mut T) -> &'a T {
         return name;
     }
-    let asdf = hell(&mut qwer);
+    let asdf = hell(&mut string_var);
     println!("{}", asdf);
 
     print!("{}", random_number(123));
@@ -111,7 +113,7 @@ fn main() {
     //fs::write("foo.txt", b"Lorem ipsum");
 }
 mod hm;
-use hm::greatings::*;
+use hm::greetings::*;
 use rand::Rng;
 fn random_number(size: i32) -> i32 {
     let mut rng = rand::thread_rng();
