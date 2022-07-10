@@ -116,8 +116,8 @@ fn main() {
     CubeYes::hello("Static func of struct impl");
 
     // Integral
-    let x2 = integral_fn_of(&|x| x * x * x);
-    x2(12, 122, 0.03);
+    let integral_of_x2 = integral_fn_of(&|x| x * x);
+    integral_of_x2(1, 15, 0.0003);
 
     // DNA
     println!("DNA: {}", dna_strand("AATTGGAACC"));
