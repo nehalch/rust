@@ -1,7 +1,6 @@
-mod hm;
-use hm::greetings::*;
 use rand::Rng;
 use std::fs::File;
+use study::hm::greetings::*;
 
 /// Just some structure for cube
 struct CubeYes {
@@ -114,7 +113,7 @@ fn main() {
         color: "red".to_string(),
     };
     cube1.info();
-    CubeYes::hello("111");
+    CubeYes::hello("Static func of struct impl");
 
     // Integral
     let x2 = integral_fn_of(&|x| x * x * x);
@@ -138,7 +137,7 @@ fn main() {
     let asdf = hell(&mut string_var);
     println!("{}", asdf);
 
-    // --- SHIT ---
+    // --- OLD SHIT ---
 
     println!("What is your name?");
     let input = std::io::stdin();
