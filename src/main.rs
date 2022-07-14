@@ -1,7 +1,7 @@
 use rand::Rng;
 use std::fs::File;
 use study::hm::greetings::*;
-
+mod lib;
 /// Just some structure for cube
 struct CubeYes {
     width: i32,
